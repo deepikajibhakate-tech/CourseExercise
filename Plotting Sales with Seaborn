@@ -1,0 +1,10 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Comparison of Sales during Recession vs Non-Recession
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Recession_Flag', y='Sales_Volume', hue='Vehicle_Type', data=df)
+plt.title('Vehicle Sales Comparison: Recession vs. Normal Periods')
+plt.xlabel('Period (0 = Normal, 1 = Recession)')
+plt.ylabel('Average Sales Volume')
+plt.show()
